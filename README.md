@@ -5,7 +5,7 @@ Stack Overflow Q&A pairs and returned **with source citations**. The RAG pipelin
 `bge-small` embeddings + FAISS + Groq-hosted Llama 3.3 70B) is exposed two ways: a
 **FastAPI** REST service and a self-contained **Streamlit** chat UI.
 
-**Live URL:** _TBD — will be added after deployment._
+**Live URL:** https://python-qna-assistant.streamlit.app
 
 ## Architecture
 
@@ -176,7 +176,7 @@ The UI and the API are independent and deploy separately (both free-tier):
 - **FastAPI API** → **Hugging Face Spaces (Docker)**, as the REST deliverable. Reads
   `$PORT` and `$INDEX_DIR`; ship the prebuilt index with the image.
 
-Live URL will be added here once deployed.
+**Live app:** https://python-qna-assistant.streamlit.app
 
 ## Limitations
 
