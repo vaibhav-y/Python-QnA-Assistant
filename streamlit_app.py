@@ -6,7 +6,19 @@ remains available separately as the REST API.
 
     streamlit run streamlit_app.py
 """
+import os
+
 import streamlit as st
+
+# On Streamlit Community Cloud, secrets set in the dashboard are not always
+# exposed as environment variables. Bridge them into os.environ BEFORE importing
+# app.config (which reads os.getenv at import time).
+try:
+    for _key, _val in st.secrets.items():
+        if isinstance(_val, str):
+            os.environ.setdefault(_key, _val)
+except Exception:
+    pass
 
 from app import config, rag
 from app.indexer import build_index
@@ -32,6 +44,7 @@ except Exception as exc:
     st.error(f"Failed to load pipeline: {exc}")
 
 with st.sidebar:
+    st.markdown("[GitHub Repo](https://github.com/vaibhav-y/Python-QnA-Assistant)")
     st.subheader("Status")
     if ready:
         st.success("pipeline ready")
@@ -55,6 +68,9 @@ with st.sidebar:
             st.success(f"Rebuilt index with {n} vectors.")
         except Exception as exc:
             st.error(f"Rebuild failed: {exc}")
+
+    st.divider()
+    st.caption("Maintained by [Vaibhav Yadav](https://github.com/vaibhav-y/)")
 
 # --- chat ---
 if "messages" not in st.session_state:

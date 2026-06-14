@@ -1,0 +1,6 @@
+[server]
+headless = true
+# Disable the source watcher: in production there's no hot-reload need, and the
+# watcher's module introspection triggers noisy torchvision import errors from
+# transformers' optional vision modules.
+fileWatcherType = "none"
