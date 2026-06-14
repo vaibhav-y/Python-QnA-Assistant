@@ -42,7 +42,8 @@ s.addShape(pres.shapes.OVAL, { x: 8.9, y: 3.4, w: 3.2, h: 3.2, fill: { color: TE
 s.addText("RAG  ·  STACK OVERFLOW  ·  GROUNDED ANSWERS", { x: 0.7, y: 1.25, w: 8.6, h: 0.3, fontFace: BF, fontSize: 13, bold: true, color: TEAL_LT, charSpacing: 2, margin: 0 });
 s.addText("Python Programming\nQ&A Assistant", { x: 0.66, y: 1.7, w: 8.6, h: 1.7, fontFace: HF, fontSize: 46, bold: true, color: WHITE, lineSpacingMultiple: 0.98, margin: 0 });
 s.addText("Retrieval-augmented answers over Stack Overflow Python Q&A — with citations.", { x: 0.7, y: 3.55, w: 8.2, h: 0.5, fontFace: BF, fontSize: 17, color: ICE, margin: 0 });
-s.addText("FastAPI  ·  FAISS  ·  bge-small  ·  Groq Llama 3.3 70B", { x: 0.7, y: 4.85, w: 8.6, h: 0.35, fontFace: BF, fontSize: 13, color: "94A3B8", margin: 0 });
+s.addText([{ text: "Built by  ", options: { color: "94A3B8" } }, { text: "Vaibhav Yadav", options: { color: WHITE, bold: true } }], { x: 0.7, y: 4.35, w: 8, h: 0.35, fontFace: BF, fontSize: 15, margin: 0 });
+s.addText("FastAPI  ·  FAISS  ·  bge-small  ·  Groq Llama 3.3 70B", { x: 0.7, y: 5.0, w: 8.6, h: 0.35, fontFace: BF, fontSize: 13, color: "94A3B8", margin: 0 });
 
 // ============ Slide 2 — What I built ============
 s = pres.addSlide();
