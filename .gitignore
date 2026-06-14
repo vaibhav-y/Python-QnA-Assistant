@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Env & secrets
+.env
+
+# Logs
+app.log
+
+# Data & built index (large / regenerable)
+data/*
+!data/.gitkeep
+!data/sample/
+
+# OS / notebooks
+.DS_Store
+.ipynb_checkpoints/
