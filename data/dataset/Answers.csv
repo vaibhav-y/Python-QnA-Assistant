@@ -1,0 +1,6 @@
+Id,OwnerUserId,CreationDate,ParentId,Score,Body
+1001,201,2014-01-02T00:00:00Z,1,50,"<p>Use <code>my_list.reverse()</code> to reverse in place, or <code>my_list[::-1]</code> for a reversed copy.</p>"
+1002,202,2014-02-02T00:00:00Z,2,40,"<p>Use the json module: <code>import json; data = json.load(open('file.json'))</code></p>"
+1003,203,2014-03-02T00:00:00Z,3,60,"<p>A <code>list</code> is mutable; a <code>tuple</code> is immutable. Use tuples for fixed collections.</p>"
+1004,204,2014-04-02T00:00:00Z,4,22,"<p>In Python 3.9+ use <code>d1 | d2</code>; on older versions use <code>{**d1, **d2}</code>.</p>"
+1005,205,2014-05-02T00:00:00Z,5,28,"<p>It means you indexed past the end of the list. Check <code>len(lst)</code> before indexing.</p>"
